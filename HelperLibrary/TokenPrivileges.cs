@@ -10,15 +10,9 @@ namespace HelperLibrary
     /// </summary>
     public class TokenPrivileges : CollectionBase
     {
-        public TokenPrivilege this[int index]
-        {
-            get { return (TokenPrivilege)InnerList[index]; }
-        }
+        public TokenPrivilege this[int index] => (TokenPrivilege)InnerList[index];
 
-        public void Add(TokenPrivilege privilege)
-        {
-            InnerList.Add(privilege);
-        }
+        public void Add(TokenPrivilege privilege) => InnerList.Add(privilege);
 
         public unsafe byte[] GetNativeTokenPrivileges()
         {
